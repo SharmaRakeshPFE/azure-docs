@@ -45,8 +45,7 @@ It isn't supported to configure Data-in replication for servers that have high a
 
 ### Filter
 
-Modifying the parameter `replicate_wild_ignore_table` used to create replication filter for tables is currently not supported for Azure Database for MySQL -Flexible server.
-
+Replication filter can be used to filter out tables and this can be achieved by setting parameter at server level using Replicate_Wild_Ignore_Table = "DBName.__%". To modify this parameter from the Azure portal, navigate to Azure Database for MySQL Flexible server used as source and select "Server parameters" to view/edit the "Replicate_Wild_Ignore_Table" parameter. Refer to MySQL :: MySQL 5.7 Reference Manual :: 13.4.2.2 CHANGE REPLICATION FILTER Statement (https://dev.mysql.com/doc/refman/5.7/en/change-replication-filter.html) for more details on modifying this server parameter.
 ### Requirements
 
 - The source server version must be at least MySQL version 5.7.
